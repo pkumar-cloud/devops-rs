@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        
+        stage('Manual Approval') {
+            steps {
+                input message: 'Invoke Lambda? (click "Proceed" to continue)'
+            }
+        }
+        stage('Invoke Lamda') {
+            steps {
+                sh 'aws lambda invoke --function-name getbitcoinprice response.json --region us-west-2'
+                }
+            }
+        stage('Display Output') {
+            steps {
+                sh 'cat response.json'
+                }
+            }
+        }
+    }

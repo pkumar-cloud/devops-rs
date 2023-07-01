@@ -1,0 +1,22 @@
+import json
+import boto3
+import requests
+
+def lambda_handler (event, context):
+# TODO implement
+# api-endpoint
+URL = "https://api.coindesk.com/v1/bpi/currentprice.json"
+
+# sending get request and saving the response as response object
+г = requests.get(url = URL)
+
+# extracting data in json format
+data = r.json()
+print(data)
+price = data['bpi']['USD']['rate float'] 
+time_data = data['time']['updated']
+
+output="Price of bitcoin is " +srt(price) + "USD at datetime " + time_data
+
+print (output)
+return output
