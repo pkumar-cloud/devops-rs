@@ -13,6 +13,7 @@ Install the following plugins:
 - GitHub Integration Plugin
 - Parameterized Trigger plugin
 - Terraform
+- Ansible (for Ansible integration)
 
 ### IAM Policies to Jenkins EC2
 - AmazonEC2FullAccess

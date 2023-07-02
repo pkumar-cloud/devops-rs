@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                checkout scm
+                checkout scm // scm is a spl variable which instructs checkout to clone the repo to appropriate Jenkins agent.
                 sh 'ls *'
             }
         }
