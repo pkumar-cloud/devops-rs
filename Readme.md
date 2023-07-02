@@ -12,6 +12,15 @@ Install the following plugins:
 - Docker Pipeline
 - GitHub Integration Plugin
 - Parameterized Trigger plugin
+- Terraform
+
+### IAM Policies to Jenkins EC2
+- AmazonEC2FullAccess
+- AmazonS3FullAccess
+- AmazonSSMManagedinstanceCore
+- AWSLambdaRole
+- AWSCloudFormationFullAccess
+- AdministraiveAcess (For Terraform demo)
 
 ## Connect with me
 🤳 Instagram: 
