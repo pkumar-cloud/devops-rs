@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('run-parallel-branches') {
             steps {
-                parallel(
+                parallel(   //under steps use ()
                     a: {
                         echo 'This is branch a'
                        },
