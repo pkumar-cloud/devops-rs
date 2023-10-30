@@ -9,7 +9,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 echo 'Starting Build step'
-                script {
+                script { //Copy groovy command directly from scripted pipeline under "script"
                     app = docker.build("pkumar-cloud/jenkinstest","./pushdockerimage/")
                 }
             }

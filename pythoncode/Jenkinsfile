@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 sh 'python -m py_compile pythoncode/add2vals.py pythoncode/calc.py'  //Compile and convert to ByteCode -> .PYC.
-                stash(name: 'compiled-results', includes: 'pythoncode/*.py*') //Saving the Bytecode on Jenkins host
+                stash(name: 'compiled-results', includes: 'pythoncode/*.py*') //stash: Saving the Bytecode on Jenkins host. ByteCode will not be vanished after life cycle of docker agent finishes. 
                 sh 'ls -l pythoncode'
             }
         }
