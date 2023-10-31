@@ -28,6 +28,7 @@ pipeline {
         }
         stage('Search and Destroy') {
             steps {
+                // Other way than using a shell script block
                 sh 'cd terraform; terraform destroy --auto-approve'
             }
         }
