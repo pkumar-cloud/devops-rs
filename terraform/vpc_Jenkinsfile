@@ -5,10 +5,13 @@ pipeline {
         stage('Clone Terraform Repo') {
             steps {
                 echo 'Hello World'
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/saha-rajdeep/devopscourse.git']]])
+                // Use pipeline syntax to generate it
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/pkumar-cloud/devops-rs.git']]])
         }}
         stage('Terraform Provision') {
             steps {
+                //Whenever we use CD in shell script in Jenkinsfile that is only active during the duration of the current Shell script BLOCK. 
+                //As soon as the Shell script block is done executing, the control is going to go out to the main directory.
                 sh """
                     cd terraform
                     terraform init
