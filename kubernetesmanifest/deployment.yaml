@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: pndrns/k8s-gitops:4
+      - image: pndrns/k8s-gitops:latest
         name: flaskdemo
         resources: {}
 status: {}
