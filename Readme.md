@@ -7,11 +7,11 @@ Follow detailed setup instructions.
 ### Jenkins plugins
 
 Install the following plugins:
-- Amazon EC2 plugin (No need to set up Configure Cloud after)
-- Docker plugin  
+- Amazon EC2 (No need to set up Configure Cloud after)
+- Docker  
 - Docker Pipeline
-- GitHub Integration Plugin
-- Parameterized Trigger plugin
+- GitHub Integration
+- Parameterized Trigger
 - Terraform
 - Ansible (for Ansible integration)
 

@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'BuildNo', defaultValue: 'BuildNo', description: 'BuildNo from Upstream')
+    }
+
+    stages {
+        stage('Display Param') {
+            steps {
+                echo '${BuildNo}'
+                
+            }
+        }
+    }
+}
