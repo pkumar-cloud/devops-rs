@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("pndrns/k8s-gitops")
+       app = docker.build("pndrns/k8s-gitops","./kubernetescode/")
     }
 
     stage('Test image') {
