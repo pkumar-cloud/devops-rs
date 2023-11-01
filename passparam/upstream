@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Call DownStream') {
             steps {
-                
+                build quietPeriod: 1, job: 'calldownstream', parameters: [string(name: 'BuildNo', value: env.BUILD_NUMBER)]
             }
         }
     }
