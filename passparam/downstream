@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Display Param') {
             steps {
-                echo '${BuildNo}'
+                echo "${BuildNo}"
                 
             }
         }
