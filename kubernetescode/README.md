@@ -21,6 +21,9 @@ Install the following plugins for the demo.
 - GitHub Integration Plugin
 - Parameterized trigger Plugin
 
+## Create EKS cluster
+eksctl create cluster
+
 ## ArgoCD installation 
 
 Install ArgoCD in your Kubernetes cluster following this link - https://argo-cd.readthedocs.io/en/stable/getting_started/
